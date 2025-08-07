@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendrier Bohème</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calendar-container">
+    <header>
+      <button id="prev">&#8592;</button>
+      <h1 id="monthYear"></h1>
+      <button id="next">&#8594;</button>
+    </header>
+    <div class="weekdays">
+      <div>Dim</div><div>Lun</div><div>Mar</div><div>Mer</div><div>Jeu</div><div>Ven</div><div>Sam</div>
+    </div>
+    <div id="calendar" class="days"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="eventModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ajouter un événement</h2>
+      <input type="text" id="eventText" placeholder="Titre de l’événement"/>
+      <button id="saveEvent">Sauvegarder</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
