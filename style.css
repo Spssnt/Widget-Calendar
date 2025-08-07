@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefaf6;
+  color: #5c4c3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calendar-container {
+  background: #fff6f0;
+  border: 2px dashed #ddb6a1;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: #eac7b8;
+  border: none;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.weekdays,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.days div {
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.days div:hover {
+  background-color: #ffe8d9;
+}
+
+.days .has-event {
+  background-color: #fdd6c6;
+  border: 1px solid #e8b29c;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fffaf7;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
